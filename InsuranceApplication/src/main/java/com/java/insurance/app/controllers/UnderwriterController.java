@@ -7,6 +7,7 @@ import com.java.insurance.app.models.Application;
 import com.java.insurance.app.models.User;
 import com.java.insurance.app.models.enums.ApplicationStatus;
 import com.java.insurance.app.services.UnderwriterService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -25,6 +26,7 @@ import static com.java.insurance.app.constants.AppConstant.STATUS;
 @RestController
 @AllArgsConstructor
 @PreAuthorize(AccessConstants.HAS_ROLE_UNDERWRITER)
+@Tag(name = "Underwriter APIs")
 public class UnderwriterController {
 
     public final UnderwriterService underwriterService;

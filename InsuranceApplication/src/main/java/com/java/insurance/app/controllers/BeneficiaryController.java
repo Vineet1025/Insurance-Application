@@ -5,6 +5,7 @@ import com.java.insurance.app.constants.BeneficiaryUrls;
 import com.java.insurance.app.models.Beneficiary;
 import com.java.insurance.app.models.User;
 import com.java.insurance.app.services.BeneficiaryService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -26,6 +27,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @EnableMethodSecurity
 @PreAuthorize(AccessConstants.HAS_ROLE_CUSTOMER)
+@Tag(name = "Beneficiary APIs")
 public class BeneficiaryController {
     private final BeneficiaryService beneficiaryService;
 

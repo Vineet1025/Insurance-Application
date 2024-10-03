@@ -5,6 +5,7 @@ import com.java.insurance.app.constants.AccessConstants;
 import com.java.insurance.app.constants.DiseaseUrls;
 import com.java.insurance.app.models.Disease;
 import com.java.insurance.app.services.DiseaseService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -26,6 +27,7 @@ import static com.java.insurance.app.constants.AppConstant.DISEASE_ID;
 @RequestMapping
 @RequiredArgsConstructor
 //@PreAuthorize(AccessConstants.HAS_ROLE_ADMIN)
+@Tag(name = "Disease APIs")
 public class DiseaseController {
     private final DiseaseService diseaseService;
 

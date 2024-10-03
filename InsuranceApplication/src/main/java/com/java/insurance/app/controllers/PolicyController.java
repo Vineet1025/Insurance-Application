@@ -5,6 +5,7 @@ import com.java.insurance.app.constants.AccessConstants;
 import com.java.insurance.app.constants.PolicyUrls;
 import com.java.insurance.app.models.Policy;
 import com.java.insurance.app.services.PolicyService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -26,6 +27,7 @@ import static com.java.insurance.app.constants.AppConstant.POLICY_INACTIVE;
 @RestController
 @RequiredArgsConstructor
 @EnableMethodSecurity
+@Tag(name = "Policy APIs")
 public class PolicyController {
     private final PolicyService policyService;
 

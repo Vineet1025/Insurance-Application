@@ -5,6 +5,7 @@ import com.java.insurance.app.constants.AdminUrls;
 import com.java.insurance.app.models.User;
 import com.java.insurance.app.services.AdminService;
 import com.java.insurance.app.services.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -26,6 +27,7 @@ import static com.java.insurance.app.constants.AppConstant.UNDERWRITER_DELETED;
 @RequiredArgsConstructor
 @EnableMethodSecurity
 @PreAuthorize(AccessConstants.HAS_ROLE_ADMIN)
+@Tag(name = "Admin APIs")
 public class AdminController {
     private final AdminService adminService;
     private final UserService userService;

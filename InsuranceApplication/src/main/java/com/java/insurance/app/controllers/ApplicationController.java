@@ -5,6 +5,7 @@ import com.java.insurance.app.constants.ApplicationUrls;
 import com.java.insurance.app.models.Application;
 import com.java.insurance.app.models.User;
 import com.java.insurance.app.services.ApplicationService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,7 @@ import java.util.List;
 @RestController
 @EnableMethodSecurity
 @RequiredArgsConstructor
+@Tag(name = "Application APIs")
 public class ApplicationController {
 
     private final ApplicationService applicationService;

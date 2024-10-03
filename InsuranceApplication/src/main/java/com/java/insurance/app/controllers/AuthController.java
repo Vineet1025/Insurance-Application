@@ -4,6 +4,7 @@ import com.java.insurance.app.services.AuthenticationService;
 import com.java.insurance.app.models.User;
 import com.java.insurance.app.payload.AuthenticationRequest;
 import com.java.insurance.app.payload.AuthenticationResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,7 @@ import static com.java.insurance.app.constants.AuthConstants.REGISTER;
 
 @RestController
 @RequiredArgsConstructor
+@Tag(name = "Authentication APIs")
 public class AuthController {
     private final AuthenticationService authenticationService;
 

@@ -3,6 +3,7 @@ package com.java.insurance.app.controllers;
 import com.java.insurance.app.constants.AccessConstants;
 import com.java.insurance.app.models.Role;
 import com.java.insurance.app.services.RoleService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -24,6 +25,7 @@ import static com.java.insurance.app.constants.RoleUrls.GET_ROLE;
 @RestController
 @RequiredArgsConstructor
 //@PreAuthorize(AccessConstants.HAS_ROLE_ADMIN)
+@Tag(name = "Role APIs")
 public class RoleController {
     private final RoleService roleService;
 

@@ -5,6 +5,7 @@ import com.java.insurance.app.constants.AccessConstants;
 import com.java.insurance.app.constants.UserUrls;
 import com.java.insurance.app.models.User;
 import com.java.insurance.app.services.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -26,6 +27,7 @@ import static com.java.insurance.app.constants.AppConstant.USER_DELETED;
 @RestController
 @RequiredArgsConstructor
 @EnableMethodSecurity
+@Tag(name = "User APIs")
 public class UserController {
     private final UserService userService;
 
